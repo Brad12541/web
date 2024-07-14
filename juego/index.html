@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prin.css">
+</head>
+<body>
+    <div class="container">
+        <a href="PacMan3D-master/index.html" data-bg="pacman.jpg">Pacman</a>
+    </div>
+    <script>
+        document.querySelectorAll('a').forEach(button => {
+            button.addEventListener('mouseover', (event) => {
+                const newBg = event.target.getAttribute('data-bg');
+                document.body.style.backgroundImage = `url(${newBg})`;
+            });
+
+            button.addEventListener('mouseout', () => {
+                document.body.style.backgroundImage = 'url(fondo.jpg)';
+            });
+        });
+    </script>
+</body>
+</html>
